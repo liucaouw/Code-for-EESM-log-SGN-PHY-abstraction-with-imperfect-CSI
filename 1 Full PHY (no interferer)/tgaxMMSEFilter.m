@@ -79,9 +79,9 @@ for i = 1:Nlinks
     for idx = 1:Nst
         % Calculate the linear receiver matrix
         Hsc = Hcp(:,:,idx,i);
-        invH = (Hsc*Hsc'+noiseesteye)\eyensts;
+        invH = (Hsc * Hsc' + noiseesteye)\eyensts;
         Wsc = Hsc' * invH;  
-        W(idx,1:Nrx,1:Nsts,i) = Wsc;
+        W(idx, 1:Nrx , 1:Nsts , i) = Wsc;
     end
 end
 end
